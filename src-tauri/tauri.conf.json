@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0",
-  "productName": "tauri-teacat",
+  "productName": "Teacat",
   "version": "0.1.0",
   "identifier": "com.darkatse.teacat",
   "build": {

@@ -5,7 +5,7 @@
   <script>
   import { onMounted, ref } from 'vue'
   import { initScene } from './three/scene'
-  import { initCamera } from './three/camera'
+  import { initCamera, updateCameraOnResize } from './three/camera'
   import { initRenderer } from './three/renderer'
   import { initControls } from './three/controls'
   import { drawCrystal, toggleAtomLabels } from './three/drawCrystal';
@@ -59,8 +59,7 @@
       }
   
       function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
+        updateCameraOnResize(camera, window.innerWidth / window.innerHeight);
         renderer.setSize(window.innerWidth, window.innerHeight);
       }
   
